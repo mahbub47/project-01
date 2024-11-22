@@ -7,6 +7,11 @@
     font-family: "Poppins", serif;
 }
 
+body{
+    display: flex;
+    flex-direction: column;
+}
+
 :root {
     --primary-color: #2196F3;
     --dark-color: #000814;
@@ -110,7 +115,7 @@
 /* hero-section css */
 
 .hero-section{
-    height: 900px;
+    height: 100vh;
     background-color: var(--primary-color);
     background-image: url(/images/bg/bg01.png);
     background-size: auto;
@@ -207,7 +212,7 @@
 
 /* carousel-section */
 .carousel-section {
-    width: 100%;
+    width: 98vw;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -224,7 +229,7 @@
 
         .img-container{
             width: 100%;
-            height: 120vh;
+            height: 120%;
             position: absolute;
             left: 0;
             display: flex;
@@ -322,6 +327,39 @@
     }
 }
 
+.small-phone{
+    display: none;
+}
+
+@media (max-width: 576px){
+    .carousel-section{
+        display: none;
+    }
+
+    .small-phone{
+        display: block;
+        margin-top: -600px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        #img01{
+            height: 300px;
+            filter: blur(1px);
+            padding: 10px;
+        }
+        #img02{
+            height: 400px;
+            padding: 10px;
+        }
+        #img03{
+            height: 300px;
+            filter: blur(1px);
+            padding: 10px;
+        }
+    }
+}
+
 
 .download-link {
     margin-top: 100px;
@@ -330,4 +368,252 @@
         border-radius: 10px;
         box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.3);
     }
+}
+
+@media (max-width: 576px){
+    .download-link {
+        margin-top: 50px;
+        img{
+            width: 100px;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.3);
+        }
+    }
+}
+
+.collab-heading {
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    h1{
+        color: var(--dark-color);
+        font-size: 96px;
+        font-weight: 700;
+    }
+
+    p{
+        margin-top: 30px;
+        width: 600px;
+    }
+}
+
+@media (max-width: 768px){
+    .collab-heading {
+        margin-top: 120px;
+        h1{
+            font-size: 48px;
+            font-weight: 700;
+        }
+    
+        p{
+            font-size: 14px;
+            margin-top: 10px;
+            width: 350px;
+        }
+    }
+}
+
+
+.faq-section{
+    margin-top: 100px;
+    width: 100%;
+    height: 100%;
+    background-image: url(/images/bg/bg02.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    h1{
+        font-size: 96px;
+        font-weight: 700;
+        color: var(--dark-color);
+    }
+
+    .faq-container{
+        margin-top: 50px;
+        width: 40%;
+    }
+
+    .accordion{
+        margin: 25px;
+
+        button{
+            padding: 30px 20px;
+            background-color: #F3F3F3;
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+
+    }
+}
+
+
+@media (max-width: 992px){
+    .faq-section{
+        background: none;
+
+        .faq-container{
+            margin-top: 20px;
+            width: 60%;
+        }
+
+        .accordion{
+            margin: 15px;
+            button{
+                padding: 30px 20px;
+                background-color: #F3F3F3;
+                font-size: 14px;
+                font-weight: 500;
+            }
+        }
+
+        h1{
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--dark-color);
+        }
+    }
+}
+
+@media (max-width: 576px){
+    .faq-section{
+        .faq-container{
+            width: 80%;
+        }
+    }
+}
+
+.download-section {
+    margin: 100px 0px;
+
+    .download-heading{
+        display: flex;
+        flex-direction: column;
+        padding-left: 200px;
+        justify-content: center;
+
+        h1{
+            font-size: 96px;
+            font-weight: 700;
+            color: var(--dark-color);
+        }
+
+        p{
+            width: 60%;
+            color: var(--dark-color);
+            margin: 20px 0px;
+        }
+
+        img{
+            margin: 20px 50px 0px 0px;
+            box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+        }
+        img:hover {
+            cursor: pointer;
+        }
+    }
+
+    .download-img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img{
+            box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.3);
+            border-radius: 60px;
+            margin-top: 100px;
+        }
+    }
+}
+
+@media (max-width: 768px){
+    .download-img > img {
+        display: none;
+    }
+
+    .download-section{
+        .download-heading{
+            padding-left: 50px;
+            h1{
+                font-size: 48px;
+            }
+            p{
+                font-size: 14px;
+                width: 80%;
+            }
+            img{
+                margin: 10px 30px 0px 0px;
+                width: 150px;
+            }
+        }
+    }
+}
+
+.subscription-section {
+    .row {
+        margin-top: 100px;
+        margin-bottom: 50px;
+        background-color: var(--primary-color);
+        color: var(--light-color);
+        border-radius: 10px;
+        padding: 50px;
+
+        h1 {
+            font-size: 48px;
+        }
+        p{
+            width: 70%;
+        }
+
+        .subscription-button{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            button {
+                padding: 10px 20px;
+                border: none;
+                background-color: var(--light-color);
+                border-radius: 5px;
+                box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.3);
+                transition: .1s;
+            }
+            button:hover {
+                box-shadow: 0px 0px 0px 2px var(--light-color);
+                background-color: var(--primary-color);
+                color: var(--light-color);
+            }
+        }
+    }
+}
+
+@media (max-width: 768px){
+    .subscription-section{
+        .row{
+            h1{
+                font-size: 32px;
+            }
+            p{
+                font-size: 14px;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.footer-section {
+    justify-self: flex-end;
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
 }
