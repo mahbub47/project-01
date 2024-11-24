@@ -85,6 +85,38 @@ body{
                 right: 20px;
                 bottom: 30px;
             }
+
+            #pass1-error{
+                position: absolute;
+                font-size: 14px;
+                color: var(--red-color);
+                right: 20px;
+                bottom: 120px;
+            }
+
+            #con-pass-error{
+                position: absolute;
+                font-size: 14px;
+                color: var(--red-color);
+                right: 20px;
+                bottom: 30px;
+            }
+
+            #name-error{
+                position: absolute;
+                font-size: 14px;
+                color: var(--red-color);
+                right: 20px;
+                top: 35px;
+            }
+
+            #email1-error{
+                position: absolute;
+                font-size: 14px;
+                color: var(--red-color);
+                right: 20px;
+                top: 125px;
+            }
         }
 
         input[type="submit"] {
@@ -113,6 +145,27 @@ body{
             left: 50px;
             font-size: 14px;
             color: var(--red-color);
+        }
+
+        #register-error {
+            position: absolute;
+            bottom: 10px;
+            left: 50px;
+            font-size: 14px;
+            color: var(--red-color);
+        }
+
+        .login-redirect {
+            position: absolute;
+            font-size: 14px;
+            bottom: 20px;
+            right: 40px;
+            text-align: right;
+            
+            a{
+                color: var(--primary-color);
+                font-weight: 500;
+            }
         }
     }
 }

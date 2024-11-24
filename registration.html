@@ -3,29 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Regisrtation</title>
     <link rel="stylesheet" href="css/login.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <div class="form-container">
         <form action="home.html">
-            <h1>Login</h1>
+            <h1>Register</h1>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque reiciendis quos optio aliquam corporis atque quisquam</p>
             <div class="input-container">
+                <label for="name">Name</label>
+                <input type="text" id="name" onkeyup="validateName()">
+                <span id="name-error"></span><br>
                 <label for="email">Email</label><br>
                 <input type="email" id="email" onkeyup="validateEmail()">
-                <span id="email-error"></span><br>
+                <span id="email1-error"></span><br>
                 <label for="pass">Password</label><br>
                 <input type="password" id="pass" onkeyup="validatePass()">
-                <span id="pass-error"></span>
+                <span id="pass1-error"></span><br>
+                <label for="con-pass">Confirm password</label><br>
+                <input type="password" id="con-pass" onkeyup="validateConPass()">
+                <span id="con-pass-error"></span>
             </div>
-            <input type="submit" name="" id="" value="Login" onclick="return validateForm()">
-            <span id="login-error"></span>
-            <p class="login-redirect">Not registered?<a href="registration.html">register</a></p>
+            <input type="submit" name="" id="" value="Register" onclick="return validateForm()">
+            <span id="register-error"></span>
+            <p class="login-redirect">Already registerd?<a href="login.html">login</a></p>
         </form>
     </div>
 
-    <script src="script/login.js"></script>
+    <script src="script/register.js"></script>
 </body>
 </html>
