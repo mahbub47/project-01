@@ -10,6 +10,7 @@
 body{
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
 }
 
 :root {
@@ -225,7 +226,7 @@ body{
         display: flex;
         flex-direction: row;
         align-items: center;
-        overflow: hidden;
+        position: absolute;
 
         .img-container{
             width: 100%;
@@ -236,7 +237,6 @@ body{
             justify-content: center;
             align-items: center;
             transition: 1s;
-            overflow: hidden;
 
             .slide_div {
                 display: flex;
@@ -367,6 +367,7 @@ body{
         margin: 50px;
         border-radius: 10px;
         box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
     }
 }
 
