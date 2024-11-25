@@ -237,6 +237,7 @@ body{
             justify-content: center;
             align-items: center;
             transition: 1s;
+            overflow: hidden;
 
             .slide_div {
                 display: flex;
